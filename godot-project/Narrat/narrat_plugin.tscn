@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://btfgjlsumg1d2"]
+
+[ext_resource type="Script" path="res://Narrat/NarratPlugin.gd" id="1_uvnpm"]
+[ext_resource type="PackedScene" uid="uid://c36fqkl50juhp" path="res://Narrat/narrat_bridge.tscn" id="2_dhqo3"]
+
+[node name="NarratPlugin" type="Node" node_paths=PackedStringArray("bridgeNode")]
+script = ExtResource("1_uvnpm")
+bridgeNode = NodePath("NarratBridge")
+
+[node name="NarratBridge" parent="." instance=ExtResource("2_dhqo3")]
+
+[connection signal="bridge_ready" from="NarratBridge" to="." method="_on_narrat_bridge_bridge_ready"]
+[connection signal="narrat_message" from="NarratBridge" to="." method="_on_narrat_bridge_narrat_message"]
