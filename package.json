@@ -16,7 +16,7 @@
     "vue.js",
     "snowpack"
   ],
-  "author": "Liana Pigeot <liana.pigeot@protonmail.com>",
+  "author": "Narrat",
   "license": "MIT",
   "scripts": {
     "start": "npm run dev",
